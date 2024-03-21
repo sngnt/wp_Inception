@@ -1,9 +1,9 @@
-# <img height="32" width="32" src="https://unpkg.com/simple-icons@v6/icons/docker.svg" /> Inception
-Цели данного проекта:
-- Расширение знаний в области системного администрирования с помощью Docker
-- Виртуализация нескольких образов Docker на виртуальной машине
-## Обязательная часть
-## Теоретический материал простым языком
+# <img height="32" width="32" src="https://unpkg.com/simple-icons@v6/icons/docker.svg" /> Bắt đầu
+Mục tiêu của dự án này:
+- Mở rộng kiến ​​thức quản trị hệ thống bằng Docker
+- Ảo hóa nhiều Docker image trên máy ảo
+## Phần bắt buộc
+## Tài liệu lý thuyết bằng ngôn ngữ đơn giản
 1. [A beginner’s guide to Docker — how to create your first Docker application](https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-your-first-docker-application-cc03de9b639f) 
 2. [How to Deploy MariaDB Server to a Docker Container](https://severalnines.com/blog/how-deploy-mariadb-server-docker-container)
 3. [Руководство по Docker Compose для начинающих](https://habr.com/ru/company/ruvds/blog/450312/)
@@ -13,7 +13,7 @@
 7. [Running MariaDB in a Docker Container](https://quebit.com/askquebit/quebit-products/running-mariadb-in-a-docker-container/#:~:text=Now%20that%20my,the%20bash%20shell%3A)
 >Последняя статья пригодится во время сдачи проекта при проверке базы данных (см. [Checklist](https://github.com/mharriso/school21-checklists/blob/master/ng_3_inception.pdf))
 ## Руководство по реализации <img height="20" width="20" src="https://unpkg.com/simple-icons@v6/icons/virtualbox.svg" /> VirualBox - <img height="20" width="20" src="https://unpkg.com/simple-icons@v6/icons/debian.svg" /> Debian 10.12 (buster), <img height="20" width="20" src="https://unpkg.com/simple-icons@v6/icons/linuxcontainers.svg" /> Containers - debian:buster
-1. [Как установить Debian в VirualBox. Полная пошаговая инструкция](https://poznyaev.ru/debian-v-virualbox/)
+1. [Cách cài đặt Debian trong ViralBox. Hoàn thành hướng dẫn từng bước](https://poznyaev.ru/debian-v-virualbox/)
 >Скачать образ debian-10.12.0-amd64-xfce-CD-1.iso можно [здесь](https://cdimage.debian.org/cdimage/archive/10.12.0/amd64/iso-cd/debian-10.12.0-amd64-xfce-CD-1.iso)
 <details>
 <summary>Если вы работаете на школьных <img height="20" width="20" src="https://unpkg.com/simple-icons@v6/icons/apple.svg" /> Mac, не забудьте выбрать папку goinfre</summary>
@@ -22,10 +22,10 @@
 </details>
 
 >Чтобы увеличить размер окна виртуальной машины в MacOS, либо нажмите на окно виртуальной машины, затем на панели основной ОС в верхей левой части экрана нажмите View->Virtual Screen 1->Scale to 200% (autoscaled output), либо измените разрешение экрана в настройках виртуальной машины (возможно, появление торможения виртуальной машины)
-2. Устанавливаем необходимые для работы программы <img height="20" width="20" src="https://unpkg.com/simple-icons@v6/icons/vim.svg" /> [Vim](https://vitux.com/how-to-install-vim-editor-on-debian/), [Make](https://ru.stackoverflow.com/questions/51452/%D0%92-linux-debian-%D0%BD%D0%B5%D1%82-%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B-make-%D0%9A%D0%B0%D0%BA-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%B0%D0%B2%D0%BB%D0%B8%D0%B2%D0%B0%D1%82%D1%8C), [Git](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-debian-10)
+2. Cài đặt các chương trình cần thiết để hoạt động <img height="20" width="20" src="https://unpkg.com/simple-icons@v6/icons/vim.svg" /> [Vim](https://vitux.com/how-to-install-vim-editor-on-debian/), [Make](https://ru.stackoverflow.com/questions/51452/%D0%92-linux-debian-%D0%BD%D0%B5%D1%82-%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B-make-%D0%9A%D0%B0%D0%BA-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%B0%D0%B2%D0%BB%D0%B8%D0%B2%D0%B0%D1%82%D1%8C), [Git](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-debian-10)
 >- Для установки <img height="20" width="20" src="https://unpkg.com/simple-icons@v6/icons/git.svg" /> Git достаточно выполнить пункт статьи "Installing Git with Default Packages"
 >- [Включить «sudo» для учетной записи пользователя в Debian](https://milq.github.io/enable-sudo-user-account-debian/)
-3. [Настройка SSH в Debian для работы в терминале в основной ОС](https://losst.ru/nastrojka-ssh-v-debian)
+3. [Thiết lập SSH trong Debian để hoạt động trong thiết bị đầu cuối trên hệ điều hành máy chủ](https://losst.ru/nastrojka-ssh-v-debian)
 >- Достаточно выполнить пункты статьи "Установка SSH в Debian" и "Настройка сервера SSH" (значение порта менять необязательно)
 >- [Не забудьте пробросить порт для SSH в VirtualBox](https://comp-security.net/%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D1%8C%D1%81%D1%8F-%D0%BA-%D0%B2%D0%B8%D1%80%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9-%D0%BC%D0%B0%D1%88%D0%B8%D0%BD%D0%B5-%D0%BF%D0%BE-ssh/)
 >>Поле "Адрес гостя" можно оставить пустым
@@ -34,7 +34,7 @@
 >rm -rf /Users/$USER/.ssh/known_hosts
 >```
 >- Для подключения <img height="20" width="20" src="https://unpkg.com/simple-icons@v6/icons/visualstudiocode.svg" /> **Visual Studio Code** к виртуальной машине запустите виртуальную машину. Откройте Visual Studio Code на основной ОС. Слева на панели VS Code выберите Extensions (Расширения) и найдите и скачайте расширение "Remote - SSH". Затем в VS Code откройте меню с помощью сочетания клавиш Command+Shift+P, введите "Remote-SSH: Connect to Host..." и нажмите Enter. Там же введите **<your_login>@localhost:<your_port>**, затем введите пароль пользователя виртуальной машины, откройте необходимую папку через Explorer->Open Folder слева на панели VS Code, снова введите пароль пользователя виртуальной машины и создайте новый терминал
-4. Изменим доменное имя в Debian. Открываем файл hosts с правами администратора (root):
+4. Hãy thay đổi tên miền trong Debian. Mở file máy chủ với quyền quản trị viên (root):
 ```
 sudo vim /etc/hosts
 ```
